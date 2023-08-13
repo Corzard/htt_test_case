@@ -1,0 +1,24 @@
+﻿@model IEnumerable<dynamic>
+<!doctype html>
+<html>
+<head>
+    <title>Goods</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Название</td>
+            <td>Категория</td>
+        </tr>
+        @foreach (var element in Model)
+        {
+            <tr>
+                <td>@element.Name</td>
+                <td>@element.Category</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>
