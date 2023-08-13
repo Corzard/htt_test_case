@@ -8,12 +8,12 @@ namespace htt_test_case.Controllers
         //ссылка на контекст бд
         private readonly ApplicationContext _context;
 
-        //конструктор
         public DefaultController(ApplicationContext context)
         {
             _context = context;
         }
 
+        //Объединение таблиц из БД и передача их для отображения
         public IActionResult Goods()
         {
             var goods = _context.Goods.Join(_context.Categories,
